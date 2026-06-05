@@ -1,7 +1,6 @@
 <?php
 // config/config.php — DramaNest (Railway compatible)
 
-// Read database connection from Railway's environment variable
 $mysql_url = getenv('MYSQL_URL');
 if ($mysql_url) {
     $parsed = parse_url($mysql_url);
@@ -17,7 +16,6 @@ if ($mysql_url) {
     define('DB_NAME', 'drama_mainframe');
 }
 
-// Create database connection
 $conn = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
 $conn->set_charset('utf8mb4');
 
@@ -25,7 +23,6 @@ if ($conn->connect_error) {
     die(json_encode(['error' => 'Connection failed: ' . $conn->connect_error]));
 }
 
-// Your existing functions (copy them from your original file)
 function getDramaTypeName($type) {
     $types = [
         'melayu'   => 'Melayu',
