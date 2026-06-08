@@ -4,15 +4,6 @@
 --  Jalankan dalam phpMyAdmin atau MySQL CLI
 -- =============================================
 
--- Drop & recreate to ensure a clean slate
-DROP DATABASE IF EXISTS drama_mainframe;
-
-CREATE DATABASE drama_mainframe
-  CHARACTER SET utf8mb4
-  COLLATE utf8mb4_unicode_ci;
-
-USE drama_mainframe;
-
 -- -----------------------------------------------
 -- Jadual utama drama
 -- -----------------------------------------------
