@@ -1,6 +1,6 @@
 <?php
 // edit_drama.php — Edit Drama
-require_once 'db.php';
+require_once 'config.php';
 
 $id = intval($_GET['id'] ?? 0);
 if (!$id) { header('Location: drama_list.php'); exit; }
